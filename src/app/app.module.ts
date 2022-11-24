@@ -10,13 +10,15 @@ import { LeftPanalComponent } from './ui-containers/left-panal/left-panal.compon
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
+import { EnterScreenComponent } from './modules/enter-home/enter-screen/enter-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     TopBarComponent,
-    LeftPanalComponent
+    LeftPanalComponent,
+    EnterScreenComponent
   ],
   imports: [
     BrowserModule,
