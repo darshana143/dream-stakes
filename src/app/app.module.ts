@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TopBarComponent } from './ui-containers/top-bar/top-bar.component';
 import { LeftPanalComponent } from './ui-containers/left-panal/left-panal.component';
+import { DsComponentsModule } from './ds-components/ds-components.module';
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
 import { EnterScreenComponent } from './modules/enter-home/enter-screen/enter-screen.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { EnterScreenComponent } from './modules/enter-home/enter-screen/enter-sc
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    InputTextModule
+    InputTextModule,
+    DsComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

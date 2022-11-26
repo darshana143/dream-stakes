@@ -10,7 +10,8 @@
     .slider {
         width: 100%;
         height: 363px;
-        background: #FCFCFC;
+        // background: #FCFCFC;
+        background-color: bisque;
         border-radius: 16px;
     }
 
@@ -29,8 +30,42 @@
 
         .img-area {
 
-            width: 367px;
-            height: 380px
+            width: 365px;
+            height: 380px;
+            flex-shrink: 0;
+
+            .txt {
+
+                position: absolute;
+                top: 697px;
+                margin-left: 13px;
+
+                .big-txt {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    color: #FFFFFF;
+                }
+
+                .small-txt {
+                    display: flex;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 15px;
+                    text-transform: capitalize;
+                    color: #FFFFFF;
+                    margin-top: 5px;
+
+                    img {
+                        width: 18px;
+                        height: 17px;
+                    }
+                }
+
+            }
 
             img {
                 width: 100%;
