@@ -62,6 +62,6 @@
 
     </div>
 
-    <app-popup [(display)]="showDialogUI"></app-popup>
+    <app-popup [display]="showDialogUI" (notifyParent)="recieveFromPopupDialog($event)" [popupData]="currentPopupPage"></app-popup>
 
 </div>
