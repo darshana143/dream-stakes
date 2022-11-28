@@ -30,6 +30,27 @@ body {
                 font-size: 18px !important;
                 color: #FFFFFF !important;
                 padding: 11px !important;
+
+                .ui-dialog-titlebar-icons {
+
+                    width: 28px;
+                    height: 28px;
+                    background-color:  #FFFFFF;
+                    border-radius: 8px;
+
+                    .ui-dialog-titlebar-icon {
+                        color: #95CED1 !important;
+
+                        span {
+                            position: relative;
+                            right: 4px;
+                            font-weight: 600;
+                            font-size: 18px;
+                        }
+                    }
+
+                }
+
             }
     
             .ui-dialog-content {
