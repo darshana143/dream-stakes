@@ -10,3 +10,17 @@ export interface ISliderConfig {
     dotPeref: IDotPref,
     default?: boolean
 }
+
+export enum IPopupCpmmands {
+    close = 'close',
+    next = 'next',
+    back = 'back'
+}
+
+export interface IPopupConfigs {
+    header: string,
+    contentHeader: string,
+    content: string,
+    nxtButton: boolean,
+    bckButton: boolean
+}
