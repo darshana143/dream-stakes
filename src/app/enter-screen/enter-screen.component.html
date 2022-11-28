@@ -27,7 +27,7 @@
                         $100
                     </div>
 
-                    <div class="bottom-txt">
+                    <div class="bottom-txt" (click)="showDialog()">
                         Enter Now
                     </div>
 
@@ -61,5 +61,7 @@
         </div>
 
     </div>
+
+    <app-popup [(display)]="showDialogUI"></app-popup>
 
 </div>

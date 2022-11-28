@@ -8,10 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { TopBarComponent } from './ui-containers/top-bar/top-bar.component';
 import { LeftPanalComponent } from './ui-containers/left-panal/left-panal.component';
 import { DsComponentsModule } from './ds-components/ds-components.module';
+import { EnterScreenComponent } from './enter-screen/enter-screen.component';
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
-import { EnterScreenComponent } from './enter-screen/enter-screen.component';
 
 
 @NgModule({

@@ -63,7 +63,7 @@
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                z-index: 1;
+                z-index: 9;
 
                 .content {
                     display: flex;
@@ -117,6 +117,7 @@
                         line-height: 19px;
                         text-decoration-line: underline;
                         color: #FFFFFF;
+                        cursor: pointer;
                     }
                 }
     

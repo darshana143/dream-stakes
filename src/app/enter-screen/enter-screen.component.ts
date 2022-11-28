@@ -9,6 +9,7 @@ import { ISliderConfig } from 'src/app/ds-components/ds-types';
 export class EnterScreenComponent implements OnInit {
 
   sliderData: ISliderConfig[];
+  showDialogUI: boolean = false;
 
   constructor() { }
 
@@ -42,6 +43,10 @@ export class EnterScreenComponent implements OnInit {
         }
       }
     ]
+  }
+
+  showDialog(){
+    this.showDialogUI = true;
   }
 
 }
