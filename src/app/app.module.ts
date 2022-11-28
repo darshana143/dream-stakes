@@ -11,7 +11,7 @@ import { DsComponentsModule } from './ds-components/ds-components.module';
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
-import { EnterScreenComponent } from './modules/enter-home/enter-screen/enter-screen.component';
+import { EnterScreenComponent } from './enter-screen/enter-screen.component';
 
 
 @NgModule({
