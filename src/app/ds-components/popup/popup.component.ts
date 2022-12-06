@@ -19,16 +19,18 @@ export class PopupComponent implements OnInit {
     
   }
 
-  close(){
-    this.sendCommandToParent(IPopupCpmmands.close);
+  close(customClose){
+    this.sendCommandToParent(IPopupCpmmands.close, customClose);
   }
 
-  sendCommandToParent(command){
+  sendCommandToParent(command, customCommand = false){
     
     switch(command){
-      case IPopupCpmmands.close: this.notifyParent.emit({command: IPopupCpmmands.close}); break;
+      case IPopupCpmmands.close: this.notifyParent.emit({command: IPopupCpmmands.close, customCommand: 'closeTearms'}); break;
       case IPopupCpmmands.next: this.notifyParent.emit({command: IPopupCpmmands.next}); break;
       case IPopupCpmmands.back: this.notifyParent.emit({command: IPopupCpmmands.back}); break;
+      case IPopupCpmmands.showTearms: this.notifyParent.emit({command: IPopupCpmmands.showTearms}); break;
+      case IPopupCpmmands.showPrivacyPolicy: this.notifyParent.emit({command: IPopupCpmmands.showPrivacyPolicy, customCommand: 'closePrivacyPolicy'}); break;
     }
 
   }

@@ -14,13 +14,17 @@ export interface ISliderConfig {
 export enum IPopupCpmmands {
     close = 'close',
     next = 'next',
-    back = 'back'
+    back = 'back',
+    showTearms = 'showTearms',
+    showPrivacyPolicy = 'showPrivacyPolicy'
 }
 
 export interface IPopupConfigs {
     header: string,
     contentHeader: string,
-    content: string,
+    content: any,
     nxtButton: boolean,
-    bckButton: boolean
+    bckButton: boolean,
+    customContents?: string,
+    contentname?: string
 }

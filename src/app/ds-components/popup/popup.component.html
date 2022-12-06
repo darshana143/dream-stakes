@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container popup-cotroller">
 
-    <p-dialog [(visible)]="display" position="top" [draggable]="false" (onHide)="close()" [transitionOptions]="'200ms'">
+    <p-dialog [(visible)]="display" position="top" [draggable]="false" (onHide)="close(popupData.customContents)" [transitionOptions]="'200ms'">
 
         <p-header>
             {{popupData.header}}
@@ -10,7 +10,75 @@
             {{popupData.contentHeader}}
         </div>
 
-        <div [innerHTML]="popupData.content"></div>
+        <div *ngIf="!popupData.customContents" [innerHTML]="popupData.content | safeHtml">
+        </div>
+
+        <div *ngIf="popupData.customContents == 'agreement'">
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus et lacus at maximus. Vivamus dignissim tincidunt turpis, eu lacinia justo tempor eu. Morbi aliquam nulla non porta tincidunt. Vivamus at ultricies enim, eget tempus quam. Etiam nisi felis, ultricies ut eros nec, accumsan luctus lectus. Donec justo enim, venenatis ac tellus quis, congue ultrices arcu. In feugiat nec dolor non vehicula. Proin id tincidunt erat.<br><br>
+
+            Nullam consectetur interdum mollis. Morbi in lacus sapien. Vivamus aliquet massa sed lacus pretium lacinia. Maecenas quis leo sed tortor maximus eleifend. Sed sit amet facilisis neque. Proin tempus massa sit amet lorem sagittis, at ultricies quam auctor. Suspendisse quis nulla commodo, elementum felis vel, pellentesque justo. In mi sem, fringilla at fermentum at, vulputate suscipit sapien. Vivamus at tincidunt libero, id rutrum nulla. Curabitur auctor lectus sit amet ex imperdiet consequat. Donec tempor magna sapien, tempus ultricies neque ultricies sed.<br><br>
+      
+          <ul>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Proin auctor ex quis sollicitudin semper.</li>
+            <li>Aliquam semper enim nec laoreet mattis.</li>
+            <li>Vivamus interdum elit vitae condimentum pretium.</li>
+            <li>Nullam vel ligula semper, viverra nulla in, pulvinar turpis.</li>
+            <li>Curabitur non elit congue, rutrum massa ut, tempor orci.</li>
+          </ul>
+
+          <br>
+          <br>
+          <br>
+
+          <p-checkbox name="groupname" value="val1" label="I agree with the"></p-checkbox><label style="margin-left: 3px; cursor: pointer; font-family: 'Open Sans'; font-style: normal; font-weight: 600; font-size: 15px; line-height: 24px; text-decoration-line: underline; color: #F9A369;" (click)="sendCommandToParent('showTearms')">Terms and Conditions</label>
+          <br>
+          <br>
+          <p-checkbox name="groupname" value="val2" label="I agree with For"></p-checkbox><label style="position: relative; top: 2px; left:5px; cursor: pointer; font-family: 'Open Sans'; font-style: normal; font-weight: 600; font-size: 15px; line-height: 24px; text-decoration-line: underline; color: #F9A369;" (click)="sendCommandToParent('showPrivacyPolicy')">Privacy Policy</label>
+
+        </div>
+
+        <div *ngIf="popupData.customContents == 'payments'">
+
+            <p-radioButton name="groupname" value="val1" label="Credit & Debit Cards"></p-radioButton>
+            <br>
+            <br>
+
+            <div style="width: 455px;">
+
+                <div class="ui-inputgroup">
+                    <input type="text" pInputText placeholder="0000 0000 0000 0000" style="width: 100%; height: 51.44px; border: 1px solid rgba(74, 137, 152, 0.4);">   
+                    <span class="ui-inputgroup-addon" style="padding-top: 13px;">
+                        <img src="./assets/popup-btns/cc.png" style="width: 22px; height: 15px;">
+                    </span>      
+                </div>
+
+                <br>
+
+                <div class="ui-inputgroup" style="display: flex; justify-content: space-between;">
+
+                    <div>
+                        <input type="text" pInputText placeholder="0000 0000 0000 0000" style="width: 183px; height: 51.44px; border: 1px solid rgba(74, 137, 152, 0.4);">   
+                        <span class="ui-inputgroup-addon" style="height: 52px; position: relative; top: -3px;">
+                            <img src="./assets/popup-btns/calender.png" style="width: 18px; height: 19px; position: relative; top: 8px;">
+                        </span> 
+                    </div>
+
+                    <div>
+                        <input type="text" pInputText placeholder="0000 0000 0000 0000" style="width: 183px; height: 51.44px; border: 1px solid rgba(74, 137, 152, 0.4);">   
+                        <span class="ui-inputgroup-addon" style="height: 52px; position: relative; top: -3px;">
+                            <img src="./assets/popup-btns/info.png" style="width: 16px; height: 16px; position: relative; top: 8px;">
+                        </span> 
+                    </div>
+     
+                </div>
+
+            </div>
+
+            <p-radioButton name="groupname" value="val2" label="Paypal"></p-radioButton>
+
+        </div>
 
         <p-footer>
 
