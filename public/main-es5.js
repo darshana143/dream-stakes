@@ -695,6 +695,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var primeng_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! primeng/dialog */
     "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dialog.js");
+    /* harmony import */
+
+
+    var primeng_checkbox__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! primeng/checkbox */
+    "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-checkbox.js");
+    /* harmony import */
+
+
+    var primeng_radiobutton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! primeng/radiobutton */
+    "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-radiobutton.js");
+    /* harmony import */
+
+
+    var _safe_html_pipe__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! ../safe-html.pipe */
+    "./src/app/safe-html.pipe.ts");
 
     var DsComponentsModule = /*#__PURE__*/_createClass(function DsComponentsModule() {
       _classCallCheck(this, DsComponentsModule);
@@ -707,13 +725,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       factory: function DsComponentsModule_Factory(t) {
         return new (t || DsComponentsModule)();
       },
-      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], primeng_dialog__WEBPACK_IMPORTED_MODULE_5__["DialogModule"]]]
+      imports: [[_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], primeng_dialog__WEBPACK_IMPORTED_MODULE_5__["DialogModule"], primeng_checkbox__WEBPACK_IMPORTED_MODULE_6__["CheckboxModule"], primeng_radiobutton__WEBPACK_IMPORTED_MODULE_7__["RadioButtonModule"]]]
     });
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](DsComponentsModule, {
-        declarations: [_common_slider_common_slider_component__WEBPACK_IMPORTED_MODULE_2__["CommonSliderComponent"], _card_slider_card_slider_component__WEBPACK_IMPORTED_MODULE_3__["CardSliderComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_4__["PopupComponent"]],
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], primeng_dialog__WEBPACK_IMPORTED_MODULE_5__["DialogModule"]],
+        declarations: [_common_slider_common_slider_component__WEBPACK_IMPORTED_MODULE_2__["CommonSliderComponent"], _card_slider_card_slider_component__WEBPACK_IMPORTED_MODULE_3__["CardSliderComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_4__["PopupComponent"], _safe_html_pipe__WEBPACK_IMPORTED_MODULE_8__["SafeHtmlPipe"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], primeng_dialog__WEBPACK_IMPORTED_MODULE_5__["DialogModule"], primeng_checkbox__WEBPACK_IMPORTED_MODULE_6__["CheckboxModule"], primeng_radiobutton__WEBPACK_IMPORTED_MODULE_7__["RadioButtonModule"]],
         exports: [_common_slider_common_slider_component__WEBPACK_IMPORTED_MODULE_2__["CommonSliderComponent"], _card_slider_card_slider_component__WEBPACK_IMPORTED_MODULE_3__["CardSliderComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_4__["PopupComponent"]]
       });
     })();
@@ -724,8 +742,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DsComponentsModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
-          declarations: [_common_slider_common_slider_component__WEBPACK_IMPORTED_MODULE_2__["CommonSliderComponent"], _card_slider_card_slider_component__WEBPACK_IMPORTED_MODULE_3__["CardSliderComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_4__["PopupComponent"]],
-          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], primeng_dialog__WEBPACK_IMPORTED_MODULE_5__["DialogModule"]],
+          declarations: [_common_slider_common_slider_component__WEBPACK_IMPORTED_MODULE_2__["CommonSliderComponent"], _card_slider_card_slider_component__WEBPACK_IMPORTED_MODULE_3__["CardSliderComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_4__["PopupComponent"], _safe_html_pipe__WEBPACK_IMPORTED_MODULE_8__["SafeHtmlPipe"]],
+          imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], primeng_dialog__WEBPACK_IMPORTED_MODULE_5__["DialogModule"], primeng_checkbox__WEBPACK_IMPORTED_MODULE_6__["CheckboxModule"], primeng_radiobutton__WEBPACK_IMPORTED_MODULE_7__["RadioButtonModule"]],
           exports: [_common_slider_common_slider_component__WEBPACK_IMPORTED_MODULE_2__["CommonSliderComponent"], _card_slider_card_slider_component__WEBPACK_IMPORTED_MODULE_3__["CardSliderComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_4__["PopupComponent"]]
         }]
       }], null, null);
@@ -760,6 +778,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       IPopupCpmmands["close"] = "close";
       IPopupCpmmands["next"] = "next";
       IPopupCpmmands["back"] = "back";
+      IPopupCpmmands["showTearms"] = "showTearms";
+      IPopupCpmmands["showPrivacyPolicy"] = "showPrivacyPolicy";
     })(IPopupCpmmands || (IPopupCpmmands = {}));
     /***/
 
@@ -808,6 +828,210 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var primeng_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! primeng/api */
     "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-api.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /* harmony import */
+
+
+    var primeng_checkbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! primeng/checkbox */
+    "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-checkbox.js");
+    /* harmony import */
+
+
+    var primeng_radiobutton__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! primeng/radiobutton */
+    "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-radiobutton.js");
+    /* harmony import */
+
+
+    var _safe_html_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../../safe-html.pipe */
+    "./src/app/safe-html.pipe.ts");
+
+    function PopupComponent_div_6_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "div", 7);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "safeHtml");
+      }
+
+      if (rf & 2) {
+        var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](1, 1, ctx_r0.popupData.content), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+      }
+    }
+
+    function PopupComponent_div_7_Template(rf, ctx) {
+      if (rf & 1) {
+        var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus et lacus at maximus. Vivamus dignissim tincidunt turpis, eu lacinia justo tempor eu. Morbi aliquam nulla non porta tincidunt. Vivamus at ultricies enim, eget tempus quam. Etiam nisi felis, ultricies ut eros nec, accumsan luctus lectus. Donec justo enim, venenatis ac tellus quis, congue ultrices arcu. In feugiat nec dolor non vehicula. Proin id tincidunt erat.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " Nullam consectetur interdum mollis. Morbi in lacus sapien. Vivamus aliquet massa sed lacus pretium lacinia. Maecenas quis leo sed tortor maximus eleifend. Sed sit amet facilisis neque. Proin tempus massa sit amet lorem sagittis, at ultricies quam auctor. Suspendisse quis nulla commodo, elementum felis vel, pellentesque justo. In mi sem, fringilla at fermentum at, vulputate suscipit sapien. Vivamus at tincidunt libero, id rutrum nulla. Curabitur auctor lectus sit amet ex imperdiet consequat. Donec tempor magna sapien, tempus ultricies neque ultricies sed.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "ul");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "li");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "li");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Proin auctor ex quis sollicitudin semper.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "li");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Aliquam semper enim nec laoreet mattis.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Vivamus interdum elit vitae condimentum pretium.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "li");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Nullam vel ligula semper, viverra nulla in, pulvinar turpis.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "li");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Curabitur non elit congue, rutrum massa ut, tempor orci.");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "p-checkbox", 8);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "label", 9);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PopupComponent_div_7_Template_label_click_24_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4);
+
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r3.sendCommandToParent("showTearms");
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Terms and Conditions");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "p-checkbox", 10);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "label", 11);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PopupComponent_div_7_Template_label_click_29_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4);
+
+          var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          return ctx_r5.sendCommandToParent("showPrivacyPolicy");
+        });
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Privacy Policy");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
+
+    function PopupComponent_div_8_Template(rf, ctx) {
+      if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "p-radioButton", 12);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](2, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 13);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 14);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "input", 15);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "span", 16);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "img", 17);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 18);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "input", 19);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "span", 20);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "img", 21);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div");
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "input", 19);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "span", 20);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "img", 22);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "p-radioButton", 23);
+
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+      }
+    }
 
     var PopupComponent = /*#__PURE__*/function () {
       function PopupComponent() {
@@ -822,16 +1046,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {}
       }, {
         key: "close",
-        value: function close() {
-          this.sendCommandToParent(_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].close);
+        value: function close(customClose) {
+          this.sendCommandToParent(_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].close, customClose);
         }
       }, {
         key: "sendCommandToParent",
         value: function sendCommandToParent(command) {
+          var customCommand = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
           switch (command) {
             case _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].close:
               this.notifyParent.emit({
-                command: _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].close
+                command: _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].close,
+                customCommand: 'closeTearms'
               });
               break;
 
@@ -844,6 +1071,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             case _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].back:
               this.notifyParent.emit({
                 command: _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].back
+              });
+              break;
+
+            case _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].showTearms:
+              this.notifyParent.emit({
+                command: _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].showTearms
+              });
+              break;
+
+            case _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].showPrivacyPolicy:
+              this.notifyParent.emit({
+                command: _ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].showPrivacyPolicy,
+                customCommand: 'closePrivacyPolicy'
               });
               break;
           }
@@ -867,9 +1107,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       outputs: {
         notifyParent: "notifyParent"
       },
-      decls: 11,
-      vars: 10,
-      consts: [[1, "container"], ["position", "top", 3, "visible", "draggable", "transitionOptions", "visibleChange", "onHide"], [1, "content-header"], [3, "innerHTML"], ["src", "./assets/popup-btns/back-arrow.png", 3, "click"], ["src", "./assets/popup-btns/next-arrao.png", 3, "click"]],
+      decls: 13,
+      vars: 12,
+      consts: [[1, "container", "popup-cotroller"], ["position", "top", 3, "visible", "draggable", "transitionOptions", "visibleChange", "onHide"], [1, "content-header"], [3, "innerHTML", 4, "ngIf"], [4, "ngIf"], ["src", "./assets/popup-btns/back-arrow.png", 3, "click"], ["src", "./assets/popup-btns/next-arrao.png", 3, "click"], [3, "innerHTML"], ["name", "groupname", "value", "val1", "label", "I agree with the"], [2, "margin-left", "3px", "cursor", "pointer", "font-family", "Open Sans", "font-style", "normal", "font-weight", "600", "font-size", "15px", "line-height", "24px", "text-decoration-line", "underline", "color", "#F9A369", 3, "click"], ["name", "groupname", "value", "val2", "label", "I agree with For"], [2, "position", "relative", "top", "2px", "left", "5px", "cursor", "pointer", "font-family", "Open Sans", "font-style", "normal", "font-weight", "600", "font-size", "15px", "line-height", "24px", "text-decoration-line", "underline", "color", "#F9A369", 3, "click"], ["name", "groupname", "value", "val1", "label", "Credit & Debit Cards"], [2, "width", "455px"], [1, "ui-inputgroup"], ["type", "text", "pInputText", "", "placeholder", "0000 0000 0000 0000", 2, "width", "100%", "height", "51.44px", "border", "1px solid rgba(74, 137, 152, 0.4)"], [1, "ui-inputgroup-addon", 2, "padding-top", "13px"], ["src", "./assets/popup-btns/cc.png", 2, "width", "22px", "height", "15px"], [1, "ui-inputgroup", 2, "display", "flex", "justify-content", "space-between"], ["type", "text", "pInputText", "", "placeholder", "0000 0000 0000 0000", 2, "width", "183px", "height", "51.44px", "border", "1px solid rgba(74, 137, 152, 0.4)"], [1, "ui-inputgroup-addon", 2, "height", "52px", "position", "relative", "top", "-3px"], ["src", "./assets/popup-btns/calender.png", 2, "width", "18px", "height", "19px", "position", "relative", "top", "8px"], ["src", "./assets/popup-btns/info.png", 2, "width", "16px", "height", "16px", "position", "relative", "top", "8px"], ["name", "groupname", "value", "val2", "label", "Paypal"]],
       template: function PopupComponent_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -879,7 +1119,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("visibleChange", function PopupComponent_Template_p_dialog_visibleChange_1_listener($event) {
             return ctx.display = $event;
           })("onHide", function PopupComponent_Template_p_dialog_onHide_1_listener() {
-            return ctx.close();
+            return ctx.close(ctx.popupData.customContents);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p-header");
@@ -894,23 +1134,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "div", 3);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, PopupComponent_div_6_Template, 2, 3, "div", 3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "p-footer");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, PopupComponent_div_7_Template, 31, 0, "div", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, PopupComponent_div_8_Template, 20, 0, "div", 4);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "img", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "p-footer");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PopupComponent_Template_img_click_9_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "img", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PopupComponent_Template_img_click_11_listener() {
             return ctx.sendCommandToParent("back");
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "img", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "img", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PopupComponent_Template_img_click_10_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PopupComponent_Template_img_click_12_listener() {
             return ctx.sendCommandToParent("next");
           });
 
@@ -940,7 +1184,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", ctx.popupData.content, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.popupData.customContents);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.popupData.customContents == "agreement");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.popupData.customContents == "payments");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
@@ -951,7 +1203,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleProp"]("visibility", ctx.popupData.nxtButton ? "visible" : "hidden");
         }
       },
-      directives: [primeng_dialog__WEBPACK_IMPORTED_MODULE_2__["Dialog"], primeng_api__WEBPACK_IMPORTED_MODULE_3__["Header"], primeng_api__WEBPACK_IMPORTED_MODULE_3__["Footer"]],
+      directives: [primeng_dialog__WEBPACK_IMPORTED_MODULE_2__["Dialog"], primeng_api__WEBPACK_IMPORTED_MODULE_3__["Header"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], primeng_api__WEBPACK_IMPORTED_MODULE_3__["Footer"], primeng_checkbox__WEBPACK_IMPORTED_MODULE_5__["Checkbox"], primeng_radiobutton__WEBPACK_IMPORTED_MODULE_6__["RadioButton"]],
+      pipes: [_safe_html_pipe__WEBPACK_IMPORTED_MODULE_7__["SafeHtmlPipe"]],
       styles: [".container[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n}\n.container[_ngcontent-%COMP%]   p-dialog[_ngcontent-%COMP%]   .content-header[_ngcontent-%COMP%] {\n  font-family: \"Open Sans\";\n  font-style: normal;\n  font-weight: 600;\n  font-size: 20px;\n  line-height: 27px;\n  color: #2C2C2C;\n  margin-top: 15px;\n  margin-bottom: 30px;\n}\n.container[_ngcontent-%COMP%]   p-dialog[_ngcontent-%COMP%]   p-footer[_ngcontent-%COMP%]   div[_ngcontent-%COMP%] {\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n}\n.container[_ngcontent-%COMP%]   p-dialog[_ngcontent-%COMP%]   p-footer[_ngcontent-%COMP%]   div[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 50px;\n  height: 50px;\n  margin-top: 30px;\n  cursor: pointer;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZHMtY29tcG9uZW50cy9wb3B1cC9EOlxcUHJpdmF0ZVxcTnlyb2Jlb25rYVxcZHJlYW0tc3Rha2VzL3NyY1xcYXBwXFxkcy1jb21wb25lbnRzXFxwb3B1cFxccG9wdXAuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2RzLWNvbXBvbmVudHMvcG9wdXAvcG9wdXAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFBO0VBQ0EsWUFBQTtBQ0NKO0FER1E7RUFDSSx3QkFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7RUFDQSxlQUFBO0VBQ0EsaUJBQUE7RUFDQSxjQUFBO0VBQ0EsZ0JBQUE7RUFDQSxtQkFBQTtBQ0RaO0FET1k7RUFFSSxXQUFBO0VBQ0EsYUFBQTtFQUNBLDhCQUFBO0FDTmhCO0FEUWdCO0VBQ0ksV0FBQTtFQUNBLFlBQUE7RUFDQSxnQkFBQTtFQUNBLGVBQUE7QUNOcEIiLCJmaWxlIjoic3JjL2FwcC9kcy1jb21wb25lbnRzL3BvcHVwL3BvcHVwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lciB7XHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIGhlaWdodDogMTAwJTtcclxuXHJcbiAgICBwLWRpYWxvZyB7XHJcblxyXG4gICAgICAgIC5jb250ZW50LWhlYWRlciB7XHJcbiAgICAgICAgICAgIGZvbnQtZmFtaWx5OiAnT3BlbiBTYW5zJztcclxuICAgICAgICAgICAgZm9udC1zdHlsZTogbm9ybWFsO1xyXG4gICAgICAgICAgICBmb250LXdlaWdodDogNjAwO1xyXG4gICAgICAgICAgICBmb250LXNpemU6IDIwcHg7XHJcbiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAyN3B4O1xyXG4gICAgICAgICAgICBjb2xvcjogIzJDMkMyQztcclxuICAgICAgICAgICAgbWFyZ2luLXRvcDogMTVweDtcclxuICAgICAgICAgICAgbWFyZ2luLWJvdHRvbTogMzBweDtcclxuXHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBwLWZvb3RlciB7XHJcblxyXG4gICAgICAgICAgICBkaXYge1xyXG5cclxuICAgICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgICAgICAgICAgICAgZGlzcGxheTogZmxleDtcclxuICAgICAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgICAgICAgICAgICAgIFxyXG4gICAgICAgICAgICAgICAgaW1nIHtcclxuICAgICAgICAgICAgICAgICAgICB3aWR0aDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICBoZWlnaHQ6IDUwcHg7XHJcbiAgICAgICAgICAgICAgICAgICAgbWFyZ2luLXRvcDogMzBweDtcclxuICAgICAgICAgICAgICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICAgICAgICAgICAgICB9XHJcblxyXG4gICAgICAgICAgICB9XHJcblxyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcbn0iLCIuY29udGFpbmVyIHtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbn1cbi5jb250YWluZXIgcC1kaWFsb2cgLmNvbnRlbnQtaGVhZGVyIHtcbiAgZm9udC1mYW1pbHk6IFwiT3BlbiBTYW5zXCI7XG4gIGZvbnQtc3R5bGU6IG5vcm1hbDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgZm9udC1zaXplOiAyMHB4O1xuICBsaW5lLWhlaWdodDogMjdweDtcbiAgY29sb3I6ICMyQzJDMkM7XG4gIG1hcmdpbi10b3A6IDE1cHg7XG4gIG1hcmdpbi1ib3R0b206IDMwcHg7XG59XG4uY29udGFpbmVyIHAtZGlhbG9nIHAtZm9vdGVyIGRpdiB7XG4gIHdpZHRoOiAxMDAlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG4uY29udGFpbmVyIHAtZGlhbG9nIHAtZm9vdGVyIGRpdiBpbWcge1xuICB3aWR0aDogNTBweDtcbiAgaGVpZ2h0OiA1MHB4O1xuICBtYXJnaW4tdG9wOiAzMHB4O1xuICBjdXJzb3I6IHBvaW50ZXI7XG59Il19 */"]
     });
     /*@__PURE__*/
@@ -1032,6 +1285,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         this.showDialogUI = false;
         this.currentPopopWindowIdx = 0;
+        this.showTearms = false;
+        this.showPrivacyPolicy = false;
       }
 
       _createClass(EnterScreenComponent, [{
@@ -1070,9 +1325,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, {
             header: 'DreamStakes Rules & Regulation',
             contentHeader: 'Non-Refundable $100 Entry Fee',
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus et lacus at maximus. Vivamus dignissim tincidunt turpis, eu lacinia justo tempor eu. Morbi aliquam nulla non porta tincidunt. Vivamus at ultricies enim, eget tempus quam. Etiam nisi felis, ultricies ut eros nec, accumsan luctus lectus. Donec justo enim, venenatis ac tellus quis, congue ultrices arcu. In feugiat nec dolor non vehicula. Proin id tincidunt erat.<br><br>\n\n        Nullam consectetur interdum mollis. Morbi in lacus sapien. Vivamus aliquet massa sed lacus pretium lacinia. Maecenas quis leo sed tortor maximus eleifend. Sed sit amet facilisis neque. Proin tempus massa sit amet lorem sagittis, at ultricies quam auctor. Suspendisse quis nulla commodo, elementum felis vel, pellentesque justo. In mi sem, fringilla at fermentum at, vulputate suscipit sapien. Vivamus at tincidunt libero, id rutrum nulla. Curabitur auctor lectus sit amet ex imperdiet consequat. Donec tempor magna sapien, tempus ultricies neque ultricies sed.<br><br>\n        \n        <ul>\n          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>\n          <li>Proin auctor ex quis sollicitudin semper.</li>\n          <li>Aliquam semper enim nec laoreet mattis.</li>\n          <li>Vivamus interdum elit vitae condimentum pretium.</li>\n          <li>Nullam vel ligula semper, viverra nulla in, pulvinar turpis.</li>\n          <li>Curabitur non elit congue, rutrum massa ut, tempor orci.</li>\n        </ul>\n        ",
+            content: "",
             bckButton: true,
-            nxtButton: true
+            nxtButton: true,
+            customContents: 'agreement'
+          }, {
+            header: 'DreamStakes Rules & Regulation',
+            contentHeader: 'Choose Your Payment Method',
+            content: "",
+            bckButton: false,
+            nxtButton: true,
+            customContents: 'payments'
+          }];
+          this.customPopupContents = [{
+            header: 'Terms and conditions',
+            contentHeader: 'Terms and conditions ',
+            content: "These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Dreamstakes.com accessible at www.dreamstakes.com.<br><br>\n        These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions. These Terms and Conditions have been generated with the help of the Terms And Conditiions Sample Generator.<br><br>\n        Minors or people below 18 years old are not allowed to use this Website.<br><br>\n        Your Privacy<br>\n        Please read Privacy Policy.<br><br>\n        No warranties<br>\n        This Website is provided \"as is,\" with all faults, and Dream stakes express no representations or warranties, of any kind related to this Website or the materials contained on this Website. Also, nothing contained on this Website shall be interpreted as advising you.<br><br>\n        Limitation of liability<br>\n        In no event shall Dream stakes, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.  Dream stakes, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.<br><br>\n        Indemnification<br>\n        You hereby indemnify to the fullest extent Dream stakes from and against any and/or all liabilities, costs, demands, causes of action, damages and expenses arising in any way related to your breach of any of the provisions of these Terms.<br><br>\n        Severability<br>\n        If any provision of these Terms is found to be invalid under any applicable law, such provisions shall be deleted without affecting the remaining provisions herein.<br><br>\n        Variation of Terms<br>\n        Dream stakes is permitted to revise these Terms at any time as it sees fit, and by using this Website you are expected to review these Terms on a regular basis.<br><br>\n        Assignment<br>\n        The Dream stakes is allowed to assign, transfer, and subcontract its rights and/or obligations under these Terms without any notification. However, you are not allowed to assign, transfer, or subcontract any of your rights and/or obligations under these Terms.<br><br>\n        Entire Agreement<br>\n        These Terms constitute the entire agreement between Dream stakes and you in relation to your use of this Website, and supersede all prior agreements and understandings.<br><br>\n        Governing Law & Jurisdiction<br>\n        These Terms will be governed by and interpreted in accordance with the laws of the State of af, and you submit to the non-exclusive jurisdiction of the state and federal courts located in af for the resolution of any disputes.\n        ",
+            bckButton: false,
+            nxtButton: false
+          }, {
+            header: 'Privacy Policy',
+            contentHeader: 'Privacy Policy',
+            content: "\n\n          Last updated: 2020-11-06 11:35:26<br>\n\n          We value your privacy very highly. Please read this Privacy Policy carefully before using the www.theloremipsumco.com Website (the \"Website\") operated by The Lorem Ipsum Company, a(n) Corporation formed in California, United States (\"us,\" \"we,\" \"our\") as this Privacy Policy contains important information regarding your privacy and how we may use the information we collect about you.\n          <br>\n          Your access to and use of the Website is conditional upon your acceptance of and compliance with this Privacy Policy. This Privacy Policy applies to everyone, including, but not limited to: visitors, users, and others, who wish to access or use the Website.\n          <br>\n          By accessing or using the Website, you agree to be bound by this Privacy Policy. If you disagree with any part of the Privacy Policy, then you do not have our permission to access or use the Website.\n          <br>\n          We collect any and all information that you enter on this Website. We collect the following information about you:\n          <br>\n\n          Category of information\tSpecific piece of information\n          <ul>\n            <li>Identifying information\tName</li>\n            <li>Identifying information\tPhone number</li>\n            <li>Identifying information\tIP address</li>\n            <li>Identifying information\tEmail address</li>\n            <li>Internet or other electronic activity\tBrowsing history</li>\n            <li>Internet or other electronic activity\tSearch history</li>\n            <li>Internet or other electronic activity\tInformation regarding your interaction with our website or application</li>\n            <li>How we may use your information</li>\n          </ul>\n          <br>\n\n          We may use the information that you provide us for the following:\n          <ul>\n            <li>Marketing and advertising;</li>\n            <li>Participation in surveys and contests;</li>\n            <li>Performing services;</li>\n            <li>Providing customer service;</li>\n            <li>Resolving disputes;</li>\n            <li>Verifying customer information;</li>\n            <li>Analytics.</li>\n            <li>With whom we share your information</li>\n          </ul>\n\n          <br>\n\n          We share your personal information with the following categories of third parties:\n          <ul>\n            <li>Content management systems;</li>\n            <li>Customer management systems;</li>\n            <li>Email marketing vendors;</li>\n            <li>Parties that need to operate the website;</li>\n            <li>Subsidiaries;</li>\n            <li>Data analytics providers;</li>\n            <li>Social networks.</li>\n          </ul>\n        ",
+            bckButton: false,
+            nxtButton: false
           }];
           this.currentPopupPage = this.popupData[this.currentPopopWindowIdx];
         }
@@ -1086,8 +1362,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function recieveFromPopupDialog(e) {
           switch (e.command) {
             case src_app_ds_components_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].close:
-              this.currentPopopWindowIdx = 0;
-              this.showDialogUI = false;
+              if (!e.customCommand) {
+                this.currentPopopWindowIdx = 0;
+                this.showDialogUI = false;
+              } else {
+                if (e.customCommand === 'closeTearms') {
+                  this.showTearms = false;
+                } else {
+                  this.showPrivacyPolicy = false;
+                }
+              }
+
               break;
 
             case src_app_ds_components_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].next:
@@ -1097,9 +1382,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             case src_app_ds_components_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].back:
               this.currentPopopWindowIdx--;
               break;
+
+            case src_app_ds_components_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].showTearms:
+              this.showTearms = true;
+              break;
+
+            case src_app_ds_components_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].showPrivacyPolicy:
+              this.showPrivacyPolicy = true;
+              break;
           }
 
-          this.currentPopupPage = this.popupData[this.currentPopopWindowIdx];
+          if (e.command !== src_app_ds_components_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].showTearms || e.command !== src_app_ds_components_ds_types__WEBPACK_IMPORTED_MODULE_1__["IPopupCpmmands"].showPrivacyPolicy) this.currentPopupPage = this.popupData[this.currentPopopWindowIdx];
         }
       }]);
 
@@ -1113,8 +1406,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     EnterScreenComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: EnterScreenComponent,
       selectors: [["app-enter-screen"]],
-      decls: 32,
-      vars: 3,
+      decls: 34,
+      vars: 7,
       consts: [[1, "container"], [1, "slider-wrapper"], [1, "slider-btns"], [1, "left"], ["src", "./assets/btn-icons/icons8_back 1.png"], [1, "right"], ["src", "./assets/btn-icons/icons8_next 2.png"], [1, "slider"], [1, "card", "card-pol-1"], [1, "card", "card-pol-2"], [1, "content"], [1, "header"], [1, "middle-txt"], [1, "btn"], [1, "bottom-txt", 3, "click"], [1, "card", "card-pol-3"], [1, "info-area"], [3, "sliderData"], [1, "img-area"], [1, "txt"], [1, "big-txt"], [1, "small-txt"], ["src", "./assets/white-star.png"], ["src", "./assets/house-info.png"], [3, "display", "popupData", "notifyParent"]],
       template: function EnterScreenComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -1226,6 +1519,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "app-popup", 24);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("notifyParent", function EnterScreenComponent_Template_app_popup_notifyParent_32_listener($event) {
+            return ctx.recieveFromPopupDialog($event);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "app-popup", 24);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("notifyParent", function EnterScreenComponent_Template_app_popup_notifyParent_33_listener($event) {
+            return ctx.recieveFromPopupDialog($event);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
@@ -1237,6 +1546,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](9);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("display", ctx.showDialogUI)("popupData", ctx.currentPopupPage);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("display", ctx.showTearms)("popupData", ctx.customPopupContents[0]);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("display", ctx.showPrivacyPolicy)("popupData", ctx.customPopupContents[1]);
         }
       },
       directives: [_ds_components_common_slider_common_slider_component__WEBPACK_IMPORTED_MODULE_2__["CommonSliderComponent"], _ds_components_popup_popup_component__WEBPACK_IMPORTED_MODULE_3__["PopupComponent"]],
@@ -1373,6 +1690,82 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }]
       }], function () {
         return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/safe-html.pipe.ts":
+  /*!***********************************!*\
+    !*** ./src/app/safe-html.pipe.ts ***!
+    \***********************************/
+
+  /*! exports provided: SafeHtmlPipe */
+
+  /***/
+  function srcAppSafeHtmlPipeTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "SafeHtmlPipe", function () {
+      return SafeHtmlPipe;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/platform-browser */
+    "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
+
+    var SafeHtmlPipe = /*#__PURE__*/function () {
+      function SafeHtmlPipe(sanitized) {
+        _classCallCheck(this, SafeHtmlPipe);
+
+        this.sanitized = sanitized;
+      }
+
+      _createClass(SafeHtmlPipe, [{
+        key: "transform",
+        value: function transform(value) {
+          return this.sanitized.bypassSecurityTrustHtml(value);
+        }
+      }]);
+
+      return SafeHtmlPipe;
+    }();
+
+    SafeHtmlPipe.ɵfac = function SafeHtmlPipe_Factory(t) {
+      return new (t || SafeHtmlPipe)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]));
+    };
+
+    SafeHtmlPipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
+      name: "safeHtml",
+      type: SafeHtmlPipe,
+      pure: true
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SafeHtmlPipe, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"],
+        args: [{
+          name: 'safeHtml'
+        }]
+      }], function () {
+        return [{
+          type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]
+        }];
       }, null);
     })();
     /***/
