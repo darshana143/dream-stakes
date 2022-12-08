@@ -62,6 +62,7 @@
 
     </div>
 
+    <!-- showDialogUI -->
     <app-popup [display]="showDialogUI" (notifyParent)="recieveFromPopupDialog($event)" [popupData]="currentPopupPage"></app-popup>
 
     <app-popup [display]="showTearms" (notifyParent)="recieveFromPopupDialog($event)" [popupData]="customPopupContents[0]"></app-popup>

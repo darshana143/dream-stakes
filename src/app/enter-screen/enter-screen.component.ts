@@ -74,9 +74,10 @@ export class EnterScreenComponent implements OnInit {
         header: 'DreamStakes Rules & Regulation',
         contentHeader: 'Choose Your Payment Method',
         content: ``,
-        bckButton: false,
-        nxtButton: true,
-        customContents: 'payments'
+        bckButton: true,
+        nxtButton: false,
+        customContents: 'payments',
+        customFooterButton: 'Submit and Process'
       },
       
     ]
@@ -203,6 +204,10 @@ export class EnterScreenComponent implements OnInit {
       case IPopupCpmmands.back: this.currentPopopWindowIdx--; break;
       case IPopupCpmmands.showTearms: this.showTearms = true; break;
       case IPopupCpmmands.showPrivacyPolicy: this.showPrivacyPolicy = true; break;
+      case IPopupCpmmands.submit:
+        this.currentPopopWindowIdx = 0;
+        this.showDialogUI = false;
+      break;
 
     }
 

@@ -119,16 +119,15 @@ body {
     }
 
     .ui-radiobutton-label {
+        position: relative !important;
+        top: 1.5px ;
         font-family: 'Open Sans' !important;
         font-style: normal !important;
         font-weight: 600 !important;
         font-size: 16px !important;
         line-height: 26px !important;
-        /* identical to box height, or 162% */
-
         text-align: justify !important;
         letter-spacing: 0.01em !important;
-
         color: #393A3D;
     }
     
