@@ -6,7 +6,9 @@ import { PopupComponent } from './popup/popup.component';
 import {DialogModule} from 'primeng/dialog';
 import {CheckboxModule} from 'primeng/checkbox';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {ButtonModule} from 'primeng/button';
 import { SafeHtmlPipe } from '../safe-html.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +18,9 @@ import { SafeHtmlPipe } from '../safe-html.pipe';
     CommonModule,
     DialogModule,
     CheckboxModule,
-    RadioButtonModule
+    RadioButtonModule,
+    ButtonModule,
+    FormsModule
   ],
   exports: [
     CommonSliderComponent,

@@ -1,10 +1,11 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { IPopupConfigs, IPopupCpmmands } from '../ds-types';
 
 @Component({
   selector: 'app-popup',
   templateUrl: './popup.component.html',
-  styleUrls: ['./popup.component.scss']
+  styleUrls: ['./popup.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PopupComponent implements OnInit {
 
@@ -12,6 +13,7 @@ export class PopupComponent implements OnInit {
   @Input() popupData: IPopupConfigs;
   @Output() notifyParent = new EventEmitter<any>();
   contentLines;
+  paymenttype: string = '';
 
   constructor() { }
 
@@ -31,6 +33,7 @@ export class PopupComponent implements OnInit {
       case IPopupCpmmands.back: this.notifyParent.emit({command: IPopupCpmmands.back}); break;
       case IPopupCpmmands.showTearms: this.notifyParent.emit({command: IPopupCpmmands.showTearms}); break;
       case IPopupCpmmands.showPrivacyPolicy: this.notifyParent.emit({command: IPopupCpmmands.showPrivacyPolicy, customCommand: 'closePrivacyPolicy'}); break;
+      case IPopupCpmmands.submit: this.notifyParent.emit({command: IPopupCpmmands.submit}); break;
     }
 
   }

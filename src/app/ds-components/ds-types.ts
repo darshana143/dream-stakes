@@ -16,7 +16,8 @@ export enum IPopupCpmmands {
     next = 'next',
     back = 'back',
     showTearms = 'showTearms',
-    showPrivacyPolicy = 'showPrivacyPolicy'
+    showPrivacyPolicy = 'showPrivacyPolicy',
+    submit = 'submit'
 }
 
 export interface IPopupConfigs {
@@ -26,5 +27,6 @@ export interface IPopupConfigs {
     nxtButton: boolean,
     bckButton: boolean,
     customContents?: string,
-    contentname?: string
+    contentname?: string,
+    customFooterButton?: string;
 }
