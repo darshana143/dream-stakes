@@ -4,7 +4,7 @@
     <app-left-panal></app-left-panal>
   </div>
 
-  <div class="right-panal">
+  <div class="content">
 
     <div class="top-bar">
       <app-top-bar></app-top-bar>
@@ -18,6 +18,10 @@
 
     </div>
 
+  </div>
+
+  <div class="right-panal" *ngIf="rightPanal">
+    <app-right-panal></app-right-panal>
   </div>
 
 </div>

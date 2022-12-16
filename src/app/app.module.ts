@@ -9,11 +9,11 @@ import { TopBarComponent } from './ui-containers/top-bar/top-bar.component';
 import { LeftPanalComponent } from './ui-containers/left-panal/left-panal.component';
 import { DsComponentsModule } from './ds-components/ds-components.module';
 import { EnterScreenComponent } from './enter-screen/enter-screen.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RightPanalComponent } from './ui-containers/right-panal/right-panal.component';
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
-import { DashboardComponent } from './dashboard/dashboard.component';
-
 
 
 @NgModule({
@@ -23,7 +23,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TopBarComponent,
     LeftPanalComponent,
     EnterScreenComponent,
-    DashboardComponent
+    DashboardComponent,
+    RightPanalComponent
   ],
   imports: [
     BrowserModule,

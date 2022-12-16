@@ -1,1 +1,26 @@
-<p>dashboard works!</p>
+<div class="container">
+
+    <div class="cards-area">
+
+        <div class="a-card" *ngFor="let aCard of cards">
+
+            <div class="icon">
+                <img [src]="aCard.icon">
+            </div>
+
+            <div class="title">
+                {{ aCard.title }}
+            </div>
+
+            <div class="info">
+
+                {{ aCard.info }}
+
+                <img *ngIf="aCard.infoIcon" [src]="aCard.infoIcon">
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

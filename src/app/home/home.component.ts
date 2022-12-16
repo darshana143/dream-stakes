@@ -10,7 +10,8 @@ import { MainViews } from '../app.types';
 export class HomeComponent implements OnInit {
 
   title = 'dream-stakes';
-  currentMainView: number = MainViews.dashboard;
+  currentMainView: number = MainViews.enterScreen;
+  rightPanal: boolean = false;
   _MainViews = MainViews;
   
   constructor(
@@ -23,6 +24,11 @@ export class HomeComponent implements OnInit {
 		this.interconnect.createListener('home/changeView', (_connection, command) => {
 
 			this.currentMainView = command.mainView;
+
+      if(this.currentMainView === this._MainViews.dashboard)
+        this.rightPanal = true;
+      else
+        this.rightPanal = false;
 			
 		})
 

@@ -11,7 +11,7 @@
     }
 
 
-    .right-panal{
+    .content{
         display: flex;
         flex-direction: column;
         flex-grow: 1;
@@ -23,6 +23,12 @@
             overflow: hidden;
             position: relative;
         }
+
+    }
+    
+    .right-panal {
+        width: 343px;
+        height: 100%;
     }
 
 }
