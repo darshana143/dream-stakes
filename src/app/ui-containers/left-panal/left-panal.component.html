@@ -6,12 +6,12 @@
             <img src="./assets/LOGO@3xDecision 2 1.png">
         </div>
     
-        <div class="main-btns select">
+        <div class="main-btns select" (click)="userChangeView(_MainViews.enterScreen)">
             <img src="./assets/btn-icons/icons8_enter 1.png">
             <label>Enter</label>
         </div>
     
-        <div class="main-btns">
+        <div class="main-btns" (click)="userChangeView(_MainViews.dashboard)">
             <img src="./assets/btn-icons/user.png">
             <label>Dashboard</label>
         </div>

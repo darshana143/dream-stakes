@@ -12,6 +12,7 @@ import { EnterScreenComponent } from './enter-screen/enter-screen.component';
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -21,7 +22,8 @@ import {InputTextModule} from 'primeng/inputtext';
     HomeComponent,
     TopBarComponent,
     LeftPanalComponent,
-    EnterScreenComponent
+    EnterScreenComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

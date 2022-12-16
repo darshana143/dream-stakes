@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Interconnect } from 'ng-interconnect';
+import { MainViews } from '../app.types';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +10,22 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title = 'dream-stakes';
+  currentMainView: number = MainViews.dashboard;
+  _MainViews = MainViews;
   
-  constructor() { }
+  constructor(
+	  private interconnect: Interconnect
+  ) { }
 
   ngOnInit(): void {
+
+		//--------------- Home UI Listeners --------------------//
+		this.interconnect.createListener('home/changeView', (_connection, command) => {
+
+			this.currentMainView = command.mainView;
+			
+		})
+
   }
 
 }

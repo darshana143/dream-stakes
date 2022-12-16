@@ -11,7 +11,11 @@
     </div>
 
     <div class="client-area">
-      <app-enter-screen></app-enter-screen>
+
+      <app-enter-screen *ngIf="currentMainView === _MainViews.enterScreen"></app-enter-screen>
+
+      <app-dashboard *ngIf="currentMainView === _MainViews.dashboard"></app-dashboard>
+
     </div>
 
   </div>
