@@ -34,6 +34,18 @@ export class DashboardComponent implements OnInit {
     }
   ]
 
+  houses = [
+    {
+      label: 'Auction House 1',
+      value: {
+        id: 1,
+        name: 'Auction House 1'
+      }
+    }
+  ]
+
+  selectedHouse = 'Auction House 1'
+
   constructor() { }
 
   ngOnInit(): void {

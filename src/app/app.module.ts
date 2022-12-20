@@ -14,6 +14,8 @@ import { RightPanalComponent } from './ui-containers/right-panal/right-panal.com
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
+import {DropdownModule} from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import {InputTextModule} from 'primeng/inputtext';
     AppRoutingModule,
     BrowserAnimationsModule,
     InputTextModule,
-    DsComponentsModule
+    DsComponentsModule,
+    DropdownModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,10 @@
 .container {
 
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 40px;
+    padding: 40px 40px 0px 40px;
 
     .cards-area {
 
@@ -10,7 +12,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         width: 100%;
-        height: 100%;
+        height: 200px;
 
         .a-card {
 
@@ -69,4 +71,135 @@
 
         }
     }
+
+    .rooms-area {
+
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 100%;
+
+        .room-count {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 75px;
+
+            .drpdwn-area {
+
+            }
+
+            .count-area{
+
+                font-family: 'Be Vietnam Pro';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                color: #95CED1;
+
+            }
+        }
+
+        .bidding-area {
+
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 200px;
+            
+
+            .left {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 200px;
+                height: 100%;
+
+                img {
+                    width: 169px;
+                    height: 169px;
+                    border-radius: 10px;
+                }
+            }
+
+            .right {
+
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                height: 100%;
+
+                .title {
+
+                    width: 100%;
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: #95CED1;
+                    background-color: red;
+
+                }
+
+                .info {
+
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    background-color: rebeccapurple;
+
+                    .start, .high, .total {
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 55px;
+                    }
+
+                    .info-title {
+
+                        font-family: 'Be Vietnam Pro';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 20px;
+                        color: #9997AE;
+                        margin-bottom: 5px;
+
+                    }
+
+                    .desc {
+
+                        font-family: 'Be Vietnam Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: #231F20;
+
+                    }
+
+                }
+
+                .buttons-area {
+
+                    width: 100%;
+                    background-color: salmon;
+
+                }
+
+            }
+
+        }
+
+        .bidding-info{
+            width: 100%;
+            flex-grow: 1;
+            background-color: brown;
+        }
+    }
+
 }
