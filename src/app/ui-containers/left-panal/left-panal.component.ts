@@ -11,6 +11,8 @@ export class LeftPanalComponent implements OnInit {
 
   private changeView: IMessageStream | Promise<IMessageStream>;
   _MainViews = MainViews;
+  showBackground: boolean = false;
+  showCards: boolean = true;
 
   constructor(private interconnect: Interconnect) {
 
@@ -24,8 +26,14 @@ export class LeftPanalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  userChangeView(viewId){
+  userChangeView(viewId, showBackground: boolean, showCards: boolean){
+
     (this.changeView as IMessageStream).emit({mainView: viewId});
+
+    // UI elements
+    this.showBackground = showBackground;
+    this.showCards = showCards;
+
   }
 
 }

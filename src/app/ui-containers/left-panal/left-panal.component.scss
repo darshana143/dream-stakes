@@ -6,6 +6,7 @@
     height: 100%;
     background: #FFFFFF;
     align-items: center;
+    flex-shrink: 0;
 
     .main-btns {
         display: flex;
@@ -51,6 +52,12 @@
     }
 
     .fixed-area {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
 
         .logo {
             width: 100%;
@@ -163,4 +170,10 @@
 
 
 
+}
+
+.show-background {
+    background: url('^assets/background-flip.png');
+    background-repeat: no-repeat;
+    background-position-y: 280px;
 }
