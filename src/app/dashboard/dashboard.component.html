@@ -80,7 +80,7 @@
 
                 <div class="buttons-area">
 
-                    <div class="custom-bid-btn">
+                    <div class="custom-bid-btn" (click)="showPlaceBid()">
                         Custom Bid
                     </div>
 
@@ -127,5 +127,7 @@
         </div>
 
     </div>
+
+    <app-popup [display]="placeBid" (notifyParent)="recieveFromPopupDialog($event)" [popupData]="currentPopupPage"></app-popup>
 
 </div>

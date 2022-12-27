@@ -39,7 +39,6 @@
 
         </div>
 
-        <!-- *ngIf="popupData.customContents == 'payments'" -->
         <div *ngIf="popupData.customContents == 'payments'">
 
             <p-radioButton name="groupname" value="cc" label="Credit & Debit Cards" [(ngModel)]="paymenttype"></p-radioButton>
@@ -149,7 +148,183 @@
 
         </div>
 
-        <p-footer>
+        <div class="place-bid" *ngIf="popupData.customContents == 'placeBid'">
+
+            <div style="width: 100%; text-align: center;">
+
+                <div style="font-family: 'Open Sans'; font-style: normal; font-weight: 700; font-size: 32px; line-height: 28px; color: #2C2C2C; margin-bottom: 15px;">
+                    Heffel Fine Art Auction House
+                </div>
+
+                <div style="font-family: 'Open Sans'; font-style: normal; font-weight: 600; font-size: 20px; line-height: 28px; color: #2C2C2C; margin-bottom: 20px;">
+                    Duplex Auction House
+                </div>
+
+                <div style="font-family: 'Open Sans'; font-style: normal; font-weight: 400; font-size: 20px; line-height: 28px; color: #2C2C2C; margin-bottom: 40px;">
+                    Current Bid : $4575
+                </div>
+
+            </div>
+
+            <div style="width: 100%; height: 0px; border: 1px solid rgba(44, 44, 44, 0.2); margin-bottom: 56px;"></div>
+
+            <div style="display: flex; flex-direction: row; align-items: center;">
+            
+            
+                <div style="width: 515px;">
+                
+                    <img style="width: 100%; height: 555px;" src="./assets/dasboard/placebid/bidding-house.png">
+
+                </div>
+
+                <div style="display: flex; flex-direction: column; flex-grow: 1; height: 555px; padding: 10px 0px 0px 50px;">
+                
+                    <div style="font-family: 'Open Sans'; font-style: normal; font-weight: 600; font-size: 20px; line-height: 28px; text-align: justify; color: #2C2C2C; margin-bottom: 30px;">
+                        The bid you enter must be higher than the highest bid
+                    </div>
+
+                    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; max-width: 450px;">
+
+                        <div style="font-family: 'Open Sans'; font-style: normal; font-weight: 600; font-size: 50px; line-height: 68px; text-align: center; color: #2C2C2C;">
+                            $
+                        </div>
+
+                        <div style="width: 284px; height: 54px;">
+                            <!-- <input type="text" pInputText class="common-txt" placeholder="Enter Bid"/> -->
+                            <span class="ui-float-label" style="margin-left: -7px;">
+                                <input id="float-input" type="text" size="30" pInputText class="common-txt"> 
+                                <label for="float-input">Enter Bid</label>
+                            </span>
+
+                            <div style="font-family: 'Open Sans';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 22px;
+                                text-align: start;
+                                margin-top: 5px;
+                                color: #FF0000;"
+                            >
+                                Highest Bid is 500$*
+                            </div>
+
+                        </div>
+
+                        <div style="position: relative; top: -3px; width: 97px; height: 53px;">
+                        
+                            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; background: #F9A369; border-radius: 10px; font-family: 'Be Vietnam Pro'; font-style: normal; font-weight: 600;
+                                font-size: 16px;
+                                line-height: 24px;
+                                text-align: center;
+                                color: #FFFFFF;"
+                            >
+                                Bid
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="details">
+
+                        <div class="item">
+
+                            <div class="title-area">
+                
+                                <label>
+                                    Your Bid
+                                </label>
+                
+                            </div>
+                
+                            <div class="val">
+                                $0.00
+                            </div>
+                
+                        </div>
+
+                        <div class="hr-line"></div>
+
+                        <div class="item">
+
+                            <div class="title-area">
+                
+                                <label>
+                                    Authentication Fee
+                                </label>
+                
+                            </div>
+                
+                            <div class="val">
+                                Free
+                            </div>
+                
+                        </div>
+
+                        <div class="hr-line"></div>
+
+                        <div class="item">
+
+                            <div class="title-area">
+                
+                                <label style="font-weight: 600;">
+                                    Total (USD)
+                                </label>
+                
+                            </div>
+                
+                            <div class="val">
+                                $0.00
+                            </div>
+                
+                        </div>
+
+                    </div>
+
+                    <div style="max-width: 590px; display: flex; flex-direction: row; justify-content: center; align-items: center; margin-top: 60px;">
+
+                        <div style="font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 17px;
+                            line-height: 26px;
+                            text-decoration-line: underline;
+                            color: rgba(169, 169, 169, 0.82);
+                            width: 180px;"
+                        >
+                            Pay via Dream Coins
+                        </div>
+
+                        <div style="display: flex; flex-direction: row; justify-content: flex-end; flex-grow: 1;">
+
+                            <div style="
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 170px;
+                                height: 52px;
+                                background: rgba(249, 163, 105, 0.5);
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 17px;
+                                line-height: 26px;
+                                color: #FCFCFC;"
+                            >
+                                Review Bid
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <p-footer *ngIf="popupData.showFooter">
 
             <div>
 

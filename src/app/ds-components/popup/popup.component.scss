@@ -62,14 +62,6 @@
             }
 
             .ui-inputgroup {
-    
-                .common-txt {
-                    height: 51.44px; 
-                    border: 1px solid rgba(74, 137, 152, 0.4);
-                    border-radius: 10px;
-                    padding-left: 15px;
-                    padding-right: 48px;
-                }
         
                 input[type=text], input::placeholder {
                     width: 100%;
@@ -97,6 +89,15 @@
                 }
             }
 
+            
+        }
+
+        .common-txt {
+            height: 51.44px; 
+            border: 1px solid rgba(74, 137, 152, 0.4);
+            border-radius: 10px;
+            padding-left: 15px;
+            padding-right: 48px;
         }
 
 
@@ -141,6 +142,65 @@
             }
 
 
+        }
+
+        .place-bid {
+
+            .details {
+
+                max-width: 450px;
+                margin-top: 95px;
+        
+                .item {
+        
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 32px;
+                    margin-bottom: 22px;
+        
+                    .title-area {
+        
+                        display: flex;
+        
+                        label {
+        
+                            font-family: 'Open Sans';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 27px;
+                            text-align: center;
+                            color: #2C2C2C;
+        
+                        }
+        
+                    }
+        
+                    .val {
+        
+                        font-family: 'Open Sans';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 27px;
+                        text-align: center;
+                        color: #2C2C2C;
+        
+                    }
+        
+        
+                }
+
+                .hr-line {
+                    width: 100%;
+                    height: 0px;
+                    border: 1px dashed rgba(0, 0, 0, 0.4);
+                    margin-bottom: 22px;
+                }
+        
+            }
         }
 
 

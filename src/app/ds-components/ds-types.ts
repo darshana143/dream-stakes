@@ -29,4 +29,5 @@ export interface IPopupConfigs {
     customContents?: string,
     contentname?: string,
     customFooterButton?: string;
+    showFooter: boolean;
 }
