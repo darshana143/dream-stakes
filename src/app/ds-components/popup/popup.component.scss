@@ -62,24 +62,6 @@
             }
 
             .ui-inputgroup {
-        
-                input[type=text], input::placeholder {
-                    width: 100%;
-                    font-family: 'Open Sans';
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 26px;
-                    text-align: justify;
-                    letter-spacing: 0.075em;
-                    color: rgba(57, 58, 61, 0.5);
-                    background-color: transparent;
-                }
-    
-                input[type=text]:focus {
-                    outline: none;
-                    box-shadow: 0 0 0 2px rgba(141, 205, 255);
-                }
     
                 .ui-inputgroup-addon {
                     position: relative;
@@ -98,6 +80,24 @@
             border-radius: 10px;
             padding-left: 15px;
             padding-right: 48px;
+        }
+
+        input[type=text], input::placeholder {
+            width: 100%;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: justify;
+            letter-spacing: 0.075em;
+            color: rgba(57, 58, 61, 0.5);
+            background-color: transparent;
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(141, 205, 255);
         }
 
 
