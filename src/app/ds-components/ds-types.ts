@@ -17,7 +17,8 @@ export enum IPopupCpmmands {
     back = 'back',
     showTearms = 'showTearms',
     showPrivacyPolicy = 'showPrivacyPolicy',
-    submit = 'submit'
+    submit = 'submit',
+    reviewBid = 'reviewBid'
 }
 
 export interface IPopupConfigs {

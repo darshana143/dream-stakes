@@ -79,7 +79,7 @@ export class EnterScreenComponent implements OnInit {
         bckButton: true,
         nxtButton: false,
         customContents: 'payments',
-        customFooterButton: 'Submit and Process',
+        customFooterButton: 'submit',
         showFooter: true
       },
       

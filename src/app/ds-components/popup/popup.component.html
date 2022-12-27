@@ -289,7 +289,7 @@
                             font-size: 17px;
                             line-height: 26px;
                             text-decoration-line: underline;
-                        color: #F9A369;"
+                            color: #F9A369;"
                         >
                             Pay via Dream Coins
                         </div>
@@ -308,7 +308,9 @@
                                 font-weight: 500;
                                 font-size: 17px;
                                 line-height: 26px;
-                                color: #FCFCFC;"
+                                color: #FCFCFC;
+                                cursor: pointer;"
+                                (click)="sendCommandToParent('reviewBid')"
                             >
                                 Review Bid
                             </div>
@@ -329,9 +331,11 @@
 
                 <img [style.visibility]="popupData.bckButton ? 'visible' : 'hidden'" src="./assets/popup-btns/back-arrow.png" (click)="sendCommandToParent('back')">
 
-                <img class="submit-btn" *ngIf="popupData.customFooterButton" src="./assets/popup-btns/submit-btn.png" (click)="sendCommandToParent('submit')">
+                <img class="submit-btn" *ngIf="popupData.customFooterButton?.includes('submit')" src="./assets/popup-btns/submit-btn.png" (click)="sendCommandToParent('submit')">
 
                 <img *ngIf="popupData.nxtButton" src="./assets/popup-btns/next-arrao.png" (click)="sendCommandToParent('next')">
+
+                <img *ngIf="popupData.customFooterButton?.includes('finish')" style="width: 170px; height: 52px;" src="./assets/dasboard/finish.png" (click)="sendCommandToParent('close')">
 
             </div>
 
