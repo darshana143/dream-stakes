@@ -6,23 +6,23 @@
             <img src="./assets/LOGO@3xDecision 2 1.png">
         </div>
     
-        <div class="main-btns select" (click)="userChangeView(_MainViews.enterScreen, false, true)">
-            <img src="./assets/btn-icons/icons8_enter 1.png">
+        <div id="0" class="main-btns select" (click)="userChangeView(_MainViews.enterScreen, false, true)">
+            <img [src]="enterBtn">
             <label>Enter</label>
         </div>
     
-        <div class="main-btns" (click)="userChangeView(_MainViews.dashboard, true, false)">
-            <img src="./assets/btn-icons/user.png">
+        <div id="1" class="main-btns" (click)="userChangeView(_MainViews.dashboard, true, false)">
+            <img [src]="dashboardBtn">
             <label>Dashboard</label>
         </div>
     
-        <div class="main-btns">
-            <img src="./assets/btn-icons/icons8_key 1.png">
+        <div  id="2" class="main-btns">
+            <img [src]="lockerBtn">
             <label>Key Locker</label>
         </div>
     
-        <div class="main-btns">
-            <img src="./assets/btn-icons/settings.png">
+        <div  id="3" class="main-btns">
+            <img [src]="settingsBtn">
             <label>Settings</label>
         </div>
     
@@ -55,7 +55,7 @@
 
     <div class="grow-area">
 
-        <div class="main-btns logout-btn">
+        <div id="999" class="main-btns logout-btn">
             <img src="./assets/btn-icons/logout.png">
             <label>Logout</label>
         </div>
