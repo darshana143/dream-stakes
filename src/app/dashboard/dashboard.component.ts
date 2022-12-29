@@ -47,10 +47,17 @@ export class DashboardComponent implements OnInit {
         id: 1,
         name: 'Auction House 1'
       }
+    },
+    {
+      label: 'Auction House 2',
+      value: {
+        id: 2,
+        name: 'Auction House 2'
+      }
     }
   ]
 
-  selectedHouse = 'Auction House 1'
+  selectedHouse;
 
   constructor() { }
 
@@ -150,6 +157,7 @@ export class DashboardComponent implements OnInit {
     ]
 
     this.currentPopupPage = this.popupData[0];
+    this.selectedHouse = this.houses[0].value;
 
   }
 
@@ -157,6 +165,10 @@ export class DashboardComponent implements OnInit {
 
     this.placeBid = true;
 
+  }
+
+  setRoom(){
+    console.log(this.selectedHouse)
   }
 
   recieveFromPopupDialog(e){

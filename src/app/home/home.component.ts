@@ -10,8 +10,8 @@ import { MainViews } from '../app.types';
 export class HomeComponent implements OnInit {
 
   title = 'dream-stakes';
-  currentMainView: number = MainViews.enterScreen;
-  rightPanal: boolean = false;
+  currentMainView: number = MainViews.dashboard;
+  rightPanal: boolean = true;
   _MainViews = MainViews;
   
   constructor(
