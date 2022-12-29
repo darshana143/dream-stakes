@@ -60,7 +60,8 @@ export class EnterScreenComponent implements OnInit {
         Duis magna sapien, malesuada sit amet felis eu, convallis rhoncus elit. Donec hendrerit urna non eros rutrum efficitur. Quisque a luctus diam. Sed vel laoreet odio. Cras accumsan tristique mauris et faucibus. Praesent sit amet dapibus dolor. Nam facilisis lacus at lectus volutpat imperdiet. Etiam tincidunt eros erat, id rutrum risus venenatis non. Aliquam ornare semper lacus at tempor. Suspendisse potenti. Curabitur tempus, nisi eget vehicula fermentum, justo tortor venenatis turpis, ac cursus nunc tortor eget augue. Duis finibus, arcu vel condimentum auctor, lectus eros placerat massa, ut facilisis odio lacus pulvinar tortor. Vivamus dictum vulputate fermentum. Integer vitae egestas mi. Etiam a tellus eu leo laoreet hendrerit.<br><br>
         Sed condimentum odio in dolor cursus consequat. Nam auctor suscipit nisi, sed egestas arcu bibendum nec. Nullam quis nibh sit amet massa interdum sollicitudin. Sed lorem nisi, iaculis placerat massa at, placerat semper sapien. Nulla dictum dapibus arcu ut condimentum. Vivamus at dapibus tellus. Duis ut augue maximus, mattis nisi ut, elementum enim. Maecenas sed aliquet lacus, eget condimentum nisi. Fusce suscipit consequat risus consequat scelerisque. Donec sodales, turpis nec scelerisque suscipit, magna ipsum eleifend magna, id aliquam sapien arcu quis urna. Cras vel mattis sapien. Etiam scelerisque venenatis fermentum. Donec at turpis a lorem vulputate sodales sed in tellus. Donec volutpat libero vitae gravida molestie. Ut sed ante neque.`,
         bckButton: false,
-        nxtButton: true
+        nxtButton: true,
+        showFooter: true
       },
       {
         header: 'DreamStakes Rules & Regulation',
@@ -68,7 +69,8 @@ export class EnterScreenComponent implements OnInit {
         content: ``,
         bckButton: true,
         nxtButton: true,
-        customContents: 'agreement'
+        customContents: 'agreement',
+        showFooter: true
       },
       {
         header: 'DreamStakes Rules & Regulation',
@@ -77,7 +79,8 @@ export class EnterScreenComponent implements OnInit {
         bckButton: true,
         nxtButton: false,
         customContents: 'payments',
-        customFooterButton: 'Submit and Process'
+        customFooterButton: 'submit',
+        showFooter: true
       },
       
     ]
@@ -109,7 +112,8 @@ export class EnterScreenComponent implements OnInit {
         These Terms will be governed by and interpreted in accordance with the laws of the State of af, and you submit to the non-exclusive jurisdiction of the state and federal courts located in af for the resolution of any disputes.
         `,
         bckButton: false,
-        nxtButton: false
+        nxtButton: false,
+        showFooter: true
       },
       {
         header: 'Privacy Policy',
@@ -166,7 +170,8 @@ export class EnterScreenComponent implements OnInit {
           </ul>
         `,
         bckButton: false,
-        nxtButton: false
+        nxtButton: false,
+        showFooter: true
 
       }
     ]

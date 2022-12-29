@@ -34,6 +34,7 @@ export class PopupComponent implements OnInit {
       case IPopupCpmmands.showTearms: this.notifyParent.emit({command: IPopupCpmmands.showTearms}); break;
       case IPopupCpmmands.showPrivacyPolicy: this.notifyParent.emit({command: IPopupCpmmands.showPrivacyPolicy, customCommand: 'closePrivacyPolicy'}); break;
       case IPopupCpmmands.submit: this.notifyParent.emit({command: IPopupCpmmands.submit}); break;
+      case IPopupCpmmands.reviewBid: this.notifyParent.emit({command: IPopupCpmmands.reviewBid}); break;
     }
 
   }

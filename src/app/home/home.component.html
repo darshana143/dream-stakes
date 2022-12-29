@@ -4,16 +4,26 @@
     <app-left-panal></app-left-panal>
   </div>
 
-  <div class="right-panal">
+  <div class="content">
 
     <div class="top-bar">
       <app-top-bar></app-top-bar>
     </div>
 
     <div class="client-area">
-      <app-enter-screen></app-enter-screen>
+
+      <app-enter-screen *ngIf="currentMainView === _MainViews.enterScreen"></app-enter-screen>
+
+      <app-dashboard *ngIf="currentMainView === _MainViews.dashboard"></app-dashboard>
+
+      <app-user-profile *ngIf="currentMainView === _MainViews.userProfile"></app-user-profile>
+
     </div>
 
+  </div>
+
+  <div class="right-panal" *ngIf="rightPanal">
+    <app-right-panal></app-right-panal>
   </div>
 
 </div>

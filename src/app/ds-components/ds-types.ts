@@ -17,7 +17,8 @@ export enum IPopupCpmmands {
     back = 'back',
     showTearms = 'showTearms',
     showPrivacyPolicy = 'showPrivacyPolicy',
-    submit = 'submit'
+    submit = 'submit',
+    reviewBid = 'reviewBid'
 }
 
 export interface IPopupConfigs {
@@ -29,4 +30,12 @@ export interface IPopupConfigs {
     customContents?: string,
     contentname?: string,
     customFooterButton?: string;
+    showFooter: boolean;
+}
+
+export interface ICard {
+    icon: string,
+    title: string,
+    info: string,
+    infoIcon: string
 }
