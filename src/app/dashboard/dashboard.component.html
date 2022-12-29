@@ -38,7 +38,14 @@
            
         </div>
 
-        <ng-container *ngTemplateOutlet="room"></ng-container>
+        <div *ngIf="currentRoom.type == 1">
+            <ng-container *ngTemplateOutlet="room; context: {'currentRoom': currentRoom}"></ng-container>
+        </div>
+
+        <div *ngIf="currentRoom.type == 0">
+            <ng-container *ngTemplateOutlet="conclude;"></ng-container>
+        </div>
+        
 
     </div>
 
@@ -46,20 +53,20 @@
 
 </div>
 
-<ng-template #room>
+<ng-template #room let-currentRoom="currentRoom">
 
     <div class="bidding-area">
 
         <div class="left">
 
-            <img src="./assets/dasboard/house.png">
+            <img [src]="currentRoom.houseImage">
 
         </div>
 
         <div class="right">
 
             <div class="title">
-                Heffel Fine Art Auction House
+                {{currentRoom.title}}
             </div>
 
             <div class="info">
@@ -67,21 +74,21 @@
                 <div class="start">
 
                     <label class="info-title">Starting Bid</label>
-                    <label class="desc">$50.00</label>
+                    <label class="desc">${{currentRoom.info.startBid}}</label>
 
                 </div>
 
                 <div class="high">
 
                     <label class="info-title">Highest Bid</label>
-                    <label class="desc">$4575.00</label>
+                    <label class="desc">${{currentRoom.info.heighestBid}}</label>
 
                 </div>
 
                 <div class="total">
 
                     <label class="info-title">Total Bids</label>
-                    <label class="desc">89</label>
+                    <label class="desc">{{currentRoom.info.totalBids}}</label>
 
                 </div>
 
@@ -103,7 +110,7 @@
 
         <div class="info-title">
 
-            Duplex Auction House
+            {{currentRoom.biddingInfo.title}}
 
             <img src="./assets/dasboard/info.png">
 
@@ -111,28 +118,18 @@
 
         <div class="desc">
 
-            Duplex means that we select two winners from this house by
-            holding two auctions, means two bidding rooms. One bidding room at a time
-            will start at 50$. The entrants will have to place their first bid for 50$ or
-            greater to be the first occupant (Winning Spot). The next highest bidder will
-            become the next occupant. After the number of paid entrants reach 50,000 a
-            48 hour clock starts counting down for when this bidding room ends. Highest
-            bidder after the 48 hour clock runs out moves on the Eligibility. In that Auction
-            House, the first bidding room is in Pending Status. Those 49,999+ from the
-            first bidding room are automatically moved to the final bidding room that
-            starts at 50$ and a 21 day timer automatically begins.
-
+            {{currentRoom.biddingInfo.desc}}
 
             <ol type="a">
-                <li>Duplex</li>
-                <li>100$ entry fee</li>
-                <li>2 total bidding rooms, 1 at a time.</li>
-                <li>After 50000 entrants, 48 hour countdown till end</li>
-                <li>49,999+ rollover to 2nd bidding room.</li>
+                <li *ngFor="let item of currentRoom.biddingInfo.list">{{item}}</li>
             </ol>
 
         </div>
 
     </div>
 
+</ng-template>
+
+<ng-template #conclude>
+    Coming Soon
 </ng-template>
