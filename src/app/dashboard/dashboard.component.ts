@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IPopupConfigs, IPopupCpmmands } from '../ds-components/ds-types';
+import { IPopupConfigs, IPopupCpmmands, ICard } from '../ds-components/ds-types';
 
 @Component({
   selector: 'app-dashboard',
@@ -224,11 +224,4 @@ export class DashboardComponent implements OnInit {
 
   }
 
-}
-
-interface ICard {
-  icon: string,
-  title: string,
-  info: string,
-  infoIcon: string
 }

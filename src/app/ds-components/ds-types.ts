@@ -32,3 +32,10 @@ export interface IPopupConfigs {
     customFooterButton?: string;
     showFooter: boolean;
 }
+
+export interface ICard {
+    icon: string,
+    title: string,
+    info: string,
+    infoIcon: string
+}

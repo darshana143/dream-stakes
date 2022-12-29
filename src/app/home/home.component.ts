@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
 		//--------------- Home UI Listeners --------------------//
 		this.interconnect.createListener('home/changeView', (_connection, command) => {
-debugger
+
 			this.currentMainView = command.mainView;
 
       if(this.currentMainView === this._MainViews.dashboard)
