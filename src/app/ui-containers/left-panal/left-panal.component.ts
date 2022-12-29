@@ -28,6 +28,28 @@ export class LeftPanalComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.interconnect.createListener('leftbar/changeView', (_connection, command) => {
+
+      // Notify home
+      (this.changeView as IMessageStream).emit({mainView: command.viewId});
+
+      // UI elements
+      this.showBackground = command.showBackground;
+      this.showCards = command.showCards;
+
+      // Reset button icons
+      this.enterBtn = './assets/btn-icons/icons8_enter 1-gray.png';
+      this.dashboardBtn = './assets/btn-icons/user.png';
+      this.lockerBtn = './assets/btn-icons/icons8_key 1.png';
+      this.settingsBtn = './assets/btn-icons/settings.png';
+
+      // Remove selected items
+      Array.from(this.elem.nativeElement.querySelectorAll('.main-btns')).forEach((btn: any) => btn.classList.remove('select'));
+
+
+		})
+
   }
 
   userChangeView(viewId, showBackground: boolean, showCards: boolean){
@@ -38,7 +60,13 @@ export class LeftPanalComponent implements OnInit {
     this.showBackground = showBackground;
     this.showCards = showCards;
 
-    // Change class
+    this.buttonsIconChange(viewId);
+
+
+  }
+
+  private buttonsIconChange(viewId){
+
     let leftbarButtons = Array.from(this.elem.nativeElement.querySelectorAll('.main-btns'));
     
     leftbarButtons.forEach((btn: any) => {

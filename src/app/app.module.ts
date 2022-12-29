@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -11,11 +12,13 @@ import { DsComponentsModule } from './ds-components/ds-components.module';
 import { EnterScreenComponent } from './enter-screen/enter-screen.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RightPanalComponent } from './ui-containers/right-panal/right-panal.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
-import { FormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -26,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     LeftPanalComponent,
     EnterScreenComponent,
     DashboardComponent,
-    RightPanalComponent
+    RightPanalComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

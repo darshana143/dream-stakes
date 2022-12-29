@@ -103,7 +103,12 @@
                 font-size: 12px;
                 line-height: 16px;
                 color: #2C2C2C;
+                cursor: pointer;
             }
+        }
+
+        .profile:hover {
+            cursor: pointer;
         }
 
         .notifications {
