@@ -11,14 +11,17 @@ export class PopupComponent implements OnInit {
 
   @Input() display: boolean = false;
   @Input() popupData: IPopupConfigs;
+  @Input() width: number;
+  @Input() height: number;
+
   @Output() notifyParent = new EventEmitter<any>();
+
   contentLines;
   paymenttype: string = '';
 
   constructor() { }
 
   ngOnInit(): void {
-    
   }
 
   close(customClose){

@@ -17,6 +17,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
+import {CheckboxModule} from 'primeng/checkbox';
 
 
 
@@ -39,7 +40,8 @@ import {DropdownModule} from 'primeng/dropdown';
     InputTextModule,
     DsComponentsModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

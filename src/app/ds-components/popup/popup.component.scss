@@ -203,6 +203,66 @@
             }
         }
 
+        .profile-popups {
+
+            display: flex;
+            flex-direction: column;
+
+            p-checkbox {
+
+                margin-left: 25px;
+                margin-bottom: 10px;
+
+                label {
+
+                    font-family: 'Open Sans';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 20px;
+                    color: #444B5C;
+                    margin-left: 22px;
+                }
+
+                .ui-chkbox {
+
+                    .ui-chkbox {
+                        background-color: #F9F9F9;
+                    }
+                }
+
+            }
+
+            .submit-btn {
+
+                width: 88px;
+                height: 32px;
+                margin-top: 30px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                }
+            }
+
+            .ins {
+
+                margin-top: 33px;
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 20px;
+                color: #444B5C;
+
+                span {
+                    color: #FF0000;
+                }
+
+            }
+        }
+
 
     }
 
