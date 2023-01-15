@@ -91,6 +91,13 @@ export class LeftPanalComponent implements OnInit {
             this.settingsBtn = './assets/btn-icons/settings.png';
           break;
 
+          case this._MainViews.keyLocker:
+            this.dashboardBtn = './assets/btn-icons/user.png';
+            this.enterBtn = './assets/btn-icons/icons8_enter 1-gray.png';
+            this.lockerBtn = './assets/btn-icons/locker-white.png';
+            this.settingsBtn = './assets/btn-icons/settings.png';
+          break;
+
         }
 
         btn.classList.add('select');

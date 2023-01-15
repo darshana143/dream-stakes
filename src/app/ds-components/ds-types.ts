@@ -37,5 +37,12 @@ export interface ICard {
     icon: string,
     title: string,
     info: string,
-    infoIcon: string
+    infoIcon: string,
+    background?: string
+}
+
+export interface IInvites {
+    name: string,
+    email: string,
+    status: string
 }
