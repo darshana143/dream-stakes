@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TopBarComponent } from './ui-containers/top-bar/top-bar.component';
@@ -13,10 +13,16 @@ import { EnterScreenComponent } from './enter-screen/enter-screen.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RightPanalComponent } from './ui-containers/right-panal/right-panal.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { KeyLockerComponent } from './key-locker/key-locker.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 // -------------------------------- PrimeNG ----------------------------------------
 import {InputTextModule} from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
+import {CheckboxModule} from 'primeng/checkbox';
+import {TabViewModule} from 'primeng/tabview';
+import {ChartModule} from 'primeng/chart';
+
 
 
 
@@ -30,7 +36,8 @@ import {DropdownModule} from 'primeng/dropdown';
     EnterScreenComponent,
     DashboardComponent,
     RightPanalComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    KeyLockerComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,11 @@ import {DropdownModule} from 'primeng/dropdown';
     InputTextModule,
     DsComponentsModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    CheckboxModule,
+    TabViewModule,
+    AgGridModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

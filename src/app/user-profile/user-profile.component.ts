@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICard } from '../ds-components/ds-types';
+import { ICard, IPopupConfigs, IPopupCpmmands } from '../ds-components/ds-types';
 
 @Component({
   selector: 'app-user-profile',
@@ -42,9 +42,73 @@ export class UserProfileComponent implements OnInit {
     }
   ]
 
+  popupData: IPopupConfigs[];
+
+  currentPopupPage: IPopupConfigs;
+  showPopupWindow: boolean = false;
+  width: number = 500;
+  height: number = 500;
+
   constructor() { }
 
   ngOnInit(): void {
+
+    this.popupData = [
+      {
+        header: 'Change Phone Number',
+        contentHeader: 'Choose a reason',
+        content: `phone`,
+        bckButton: false,
+        nxtButton: false,
+        customContents: 'change-phone-number',
+        showFooter: false
+      },
+      {
+        header: 'Change Address',
+        contentHeader: 'Choose a reason',
+        content: `address`,
+        bckButton: false,
+        nxtButton: false,
+        customContents: 'change-address',
+        showFooter: false
+      }
+      
+    ]
+
+  }
+
+  recieveFromPopupDialog(e){
+    
+    switch(e.command){
+
+      case IPopupCpmmands.close:
+        this.showPopupWindow = false;
+        
+
+      break;
+      case IPopupCpmmands.submit:
+
+        this.showPopupWindow = false;
+
+      break;
+
+    }
+    
+
+  }
+
+  changeAddress(){
+
+    this.currentPopupPage = this.popupData[1];
+    this.showPopupWindow = true;
+
+  }
+
+  changePhoneNumber(){
+
+    this.currentPopupPage = this.popupData[0];
+    this.showPopupWindow = true;
+
   }
 
 }
