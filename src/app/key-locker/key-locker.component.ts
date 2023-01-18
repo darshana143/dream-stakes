@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ICard, IInvites } from '../ds-components/ds-types';
+import * as Chart from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 @Component({
   selector: 'app-key-locker',
@@ -301,43 +303,150 @@ export class KeyLockerComponent implements OnInit {
   ]
 
   // Charts
-  data: any;
+  chartData: any;
   chartOptions: any;
+  chartHeight: number = 450;
+  chartWidth: number = 1050;
 
   constructor() { 
-    this.data = {
-      labels: ['08/2023', '09/2023', '10/2023', '11/2023', '12/2023', '13/2023', '14/2023'],
-      datasets: [
-        {
-          data: [50, 150, 150, 200, 500, 500, 800],
-          fill: false,
-          borderColor: '#F9A369',
-          pointBackgroundColor: '#72CDC2',
-          pointBorderColor: '#72CDC2',
-          lineTension: 0
-        }
-      ]
+
+    this.chartData = {
+
+      cashSpent: {
+        labels: ['08/2023', '09/2023', '10/2023', '11/2023', '12/2023', '13/2023', '14/2023'],
+        datasets: [
+          {
+            data: [50, 150, 150, 200, 500, 500, 800],
+            fill: false,
+            borderColor: '#F9A369',
+            pointBackgroundColor: '#72CDC2',
+            pointBorderColor: '#72CDC2',
+            lineTension: 0
+          }
+        ]
+
+      },
+      contractsWon: {
+        labels: ['Single Auction House', 'Duplex Auction House', 'Commercial Auction House'],
+        datasets: [
+          {
+            label: 'My First dataset',
+            backgroundColor: '#ED8646',
+            borderColor: '#ED8646',
+            data: [250, 450, 300]
+          }
+        ]
+
+      },
+      bids: {
+        labels: ['Pioneer Contract,','STL Division','Trailblazer Contract', 'Sectional Contract', 'ATL Division'],
+        datasets: [
+          {
+            data: [300, 50, 100, 45, 38],
+            backgroundColor: [
+              "#95CED1",
+              "#FCDA61",
+              "#F9A369",
+              '#EB9FA6',
+              '#F6CBC6'
+            ],
+            hoverBackgroundColor: [
+              "#95CED1",
+              "#FCDA61",
+              "#F9A369",
+              '#EB9FA6',
+              '#F6CBC6'
+            ]
+          }
+        ]    
+      }
+
     }
 
     this.chartOptions = {
-      legend: {display: false},
-      maintainAspectRatio: false,
-      scales: {
-        x: [{
-          ticks: {
-            padding: {
-              left: 20
+
+      cashSpent: {
+        legend: {display: false},
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            ticks: {
+              // padding: {
+              //   left: 20
+              // }
+            },
+            gridLines : {
+              display : false
             }
-          }
-        }]
+          }]
+        }
+      },
+      contractsWon: {
+        legend: {display: false},
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [{
+            maxBarThickness: 40,
+            gridLines : {
+              display : false
+            },
+            ticks: {
+              fontFamily: 'Roboto', 
+              fontSize: 12, 
+              fontWeight: 400,
+            }
+          }],
+          yAxes: [{
+            ticks: {
+              fontFamily: 'Roboto', 
+              fontSize: 12, 
+              fontWeight: 400,
+              beginAtZero: true,
+              callback: (value)=> {
+                return '$' + value
+              }
+              
+            }
+          }]
+        }
+      },
+      bids: {
+        plugins: {
+          // datalabels: {
+          //   /* show value in percents */
+          //   // formatter: (value, ctx) => {
+          //   //   let sum = 0;
+          //   //   const dataArr = ctx.chart.data.datasets[0].data;
+          //   //   dataArr.map(data => {
+          //   //         sum += data;
+          //   //   });
+          //   //   const percentage = (value * 100 / sum); 
+          //   //   return percentage !== 0 ? percentage.toFixed(2) + '%' : '';
+          //   // },
+          //   color: 'red',
+          //   align: 'top'
+          // },
+
+          
+        },
+        legend: {
+          display: true,
+          labels: {
+            color: 'rgb(255, 99, 132)'
+          },
+          position: 'right',
+          fullSize: true,
+          borderWidth: 10
+        }
+
       }
+
     }
+
+
   }
 
   ngOnInit(): void {
-
-    if(this.agGrid)
-      this.agGrid.getRowHeight = () => 55;
 
   }
 
