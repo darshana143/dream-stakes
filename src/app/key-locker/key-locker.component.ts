@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ICard, IInvites } from '../ds-components/ds-types';
 import * as Chart from 'chart.js';
@@ -7,8 +7,7 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 @Component({
   selector: 'app-key-locker',
   templateUrl: './key-locker.component.html',
-  styleUrls: ['./key-locker.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./key-locker.component.scss']
 })
 export class KeyLockerComponent implements OnInit {
 
