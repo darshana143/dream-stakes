@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
-import { ICard, IInvites, KeyLockerViews } from '../ds-components/ds-types';
+import { from } from 'rxjs';
+import { ICard, IInvites, IPopupConfigs, IPopupCpmmands, KeyLockerViews } from '../ds-components/ds-types';
+import { GridBtnRendererComponent } from './grid-btn-renderer/grid-btn-renderer.component';
 
 @Component({
   selector: 'app-key-locker',
@@ -13,6 +15,10 @@ export class KeyLockerComponent implements OnInit {
 
   Views = KeyLockerViews;
   currentView: string = KeyLockerViews.entries;
+  observeUI: boolean = false;
+  reviewUI: boolean = false;
+
+  frameworkComponents: any;
 
   activeColumnDefs = [
     {  
@@ -56,10 +62,12 @@ export class KeyLockerComponent implements OnInit {
       width: 200,
       resizable: true,
       sort: 'asc',
-      cellRenderer: this.buttonRenderer
+      cellRendererFramework: GridBtnRendererComponent,
+      cellRendererParams: { 
+        clickHandler: this.showObserveUI.bind(this)
+      }
     }
   ];
-
 
   activeRowData = [
     {
@@ -155,7 +163,10 @@ export class KeyLockerComponent implements OnInit {
       width: 200,
       resizable: true,
       sort: 'asc',
-      cellRenderer: this.buttonRenderer
+      cellRendererFramework: GridBtnRendererComponent,
+      cellRendererParams: { 
+        clickHandler: this.showReviewUI.bind(this)
+      }
     },
     {  
       headerName: 'Claim Status',
@@ -163,7 +174,7 @@ export class KeyLockerComponent implements OnInit {
       width: 200,
       resizable: true,
       sort: 'asc',
-      cellRenderer: this.buttonRenderer
+      cellRendererFramework: GridBtnRendererComponent
     }
   ]
 
@@ -370,6 +381,89 @@ export class KeyLockerComponent implements OnInit {
 
   ];
 
+  bidPlacedtColumnDefs = [
+    {  
+      headerName: '#ID',
+      field: 'ID',
+      width: 150,
+      resizable: true,
+      sort: 'asc'
+    },
+    {  
+      headerName: 'Entry Date',
+      field: 'EntryDate',
+      width: 300,
+      resizable: true,
+      sort: 'asc'
+    },
+    {  
+      headerName: 'Auction Type',
+      field: 'AuctionType',
+      width: 300,
+      resizable: true,
+      sort: 'asc'
+    },
+    {  
+      headerName: 'Bids (times)',
+      field: 'Bids',
+      width: 300,
+      resizable: true,
+      sort: 'asc'
+    }
+  ];
+
+  bidPlacedRowData = [
+    {
+      ID: '1.2',
+      EntryDate: 'Nov 16, 2020',
+      AuctionType: 'Duplex',
+      Bids: '10'
+    },
+    {
+      ID: '1.2',
+      EntryDate: 'Nov 16, 2020',
+      AuctionType: 'Duplex',
+      Bids: '10'
+    },
+    {
+      ID: '1.2',
+      EntryDate: 'Nov 16, 2020',
+      AuctionType: 'Duplex',
+      Bids: '10'
+    },
+    {
+      ID: '1.2',
+      EntryDate: 'Nov 16, 2020',
+      AuctionType: 'Duplex',
+      Bids: '10'
+    },
+    {
+      ID: '1.2',
+      EntryDate: 'Nov 16, 2020',
+      AuctionType: 'Duplex',
+      Bids: '10'
+    },
+    {
+      ID: '1.2',
+      EntryDate: 'Nov 16, 2020',
+      AuctionType: 'Duplex',
+      Bids: '10'
+    },
+    {
+      ID: '1.2',
+      EntryDate: 'Nov 16, 2020',
+      AuctionType: 'Duplex',
+      Bids: '10'
+    },
+    {
+      ID: '1.2',
+      EntryDate: 'Nov 16, 2020',
+      AuctionType: 'Duplex',
+      Bids: '10'
+    },
+
+  ];
+
   cards: ICard[] = [
     {
       id: KeyLockerViews.entries,
@@ -457,6 +551,11 @@ export class KeyLockerComponent implements OnInit {
 
   showContractChart: boolean = true;
   showContractDetails: boolean = false;
+
+  showBidPlacedChart: boolean = true;
+  showBidPlacedGrid: boolean = false;
+
+  popupData: IPopupConfigs[];
 
   constructor(private cdr: ChangeDetectorRef) { 
 
@@ -682,55 +781,40 @@ export class KeyLockerComponent implements OnInit {
 
     }
 
-
   }
 
   ngOnInit(): void {
-    this.changeInternalViews('contractChart');
+
+    this.popupData = [
+      {
+        header: 'Observe',
+        contentHeader: 'The observe window is a detailed window of the auction. And you can see last active 10 bidders details.',
+        content: ``,
+        bckButton: false,
+        nxtButton: false,
+        customContents: 'observe',
+        showFooter: false
+      },
+      {
+        header: 'Review',
+        contentHeader: '',
+        content: ``,
+        bckButton: false,
+        nxtButton: false,
+        customContents: 'review',
+        showFooter: false
+      }
+    ]
+
+
   }
 
-  buttonRenderer(params:any){
+  showObserveUI(){
+    this.observeUI = true;
+  }
 
-    var ui = document.createElement('div');
-
-    ui.style['display'] = 'flex';
-    ui.style['flex-direction'] = 'column';
-    ui.style['align-items'] = 'center';
-    ui.style['justify-content'] = 'center';
-    ui.style.width = '100%';
-    ui.style['text-align'] = 'center';
-    ui.style['font-family'] = 'Open Sans';
-    ui.style['font-style'] = 'normal';
-    ui.style['font-weight'] = '600';
-    ui.style['font-size'] = '16px';
-    ui.style['line-height'] = '22px';
-    ui.style['letter-spacing'] = '0.01em';
-    ui.style['text-decoration-line'] = 'underline';
-    ui.style['color'] = '#F9A369';
-    ui.style['cursor'] = 'pointer';
-
-    if(params.colDef.field === 'actBtn')
-      ui.innerHTML = 'Observe';
-    else
-      if(params.colDef.field === 'Closed'){
-        ui.innerHTML = 'Review';
-      }
-      else
-        if(params.colDef.field === 'ClaimStatus'){
-
-          if(params.data.ClaimStatus.toLowerCase() === 'pending')
-            ui.style['color'] = '#D9534F';
-          else
-            ui.style['color'] = '#5CB85C';
-
-            ui.innerHTML = params.data.ClaimStatus;
-            ui.style['text-decoration-line'] = 'unset';
-
-        }
-          
-
-    return ui;
-
+  showReviewUI(){
+    this.reviewUI = true;
   }
 
   viewChange(aCard){
@@ -756,8 +840,6 @@ export class KeyLockerComponent implements OnInit {
 
 
   }
-
-
 
   changeInternalViews(viewName){
 
@@ -801,9 +883,36 @@ export class KeyLockerComponent implements OnInit {
         this.showContractChart = false;
       break;
 
+      case 'showBidPlacedChart':
+        this.showBidPlacedChart = true;
+        this.showBidPlacedGrid = false;
+      break;
+
+      case 'showBidPlacedGrid':
+        this.showBidPlacedGrid = true;
+        this.showBidPlacedChart = false;
+      break;
+
     }
 
     this.cdr.detectChanges();
+
+  }
+
+  recieveFromPopupDialog(e){
+    
+    switch(e.command){
+
+      case IPopupCpmmands.close:
+ 
+        this.observeUI = false;
+        this.reviewUI = false;
+
+      break;
+      
+    }
+
+    
 
   }
 
